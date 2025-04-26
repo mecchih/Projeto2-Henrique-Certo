@@ -7,3 +7,9 @@ def rolar_dados(numero):
         lista.append(valor)
         i+=1
     return lista
+
+def guardar_dado(rolados,guardados,numero):
+
+    guardados.append(rolados[numero])
+    del rolados[numero]
+    return [rolados,guardados]

@@ -34,3 +34,8 @@ def calcula_pontos_soma(lista_inteiros):
         soma += i
     return soma
 
+def calcula_pontos_sequencia_baixa(lista_inteiros):
+    if 1 in lista_inteiros and 2 in lista_inteiros and 3 in lista_inteiros and 4 in lista_inteiros or  5 in lista_inteiros and 2 in lista_inteiros and 3 in lista_inteiros and 4 in lista_inteiros or 6 in lista_inteiros and 5 in lista_inteiros and 3 in lista_inteiros and 4 in lista_inteiros:
+        return 15
+    else:
+        return 0 

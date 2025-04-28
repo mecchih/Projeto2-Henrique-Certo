@@ -18,4 +18,13 @@ def remover_dado(rolados,guardados,numero):
     rolados.append(guardados[numero])
     del guardados[numero]
     return [rolados,guardados]
-    
+
+ 
+def calcula_pontos_regra_simples(lista_inteiros):
+    dicionario = {1:0,2:0,3:0,4:0,5:0,6:0}
+    for i in lista_inteiros:
+        if i in dicionario:
+            dicionario[i] += i
+
+    return dicionario
+

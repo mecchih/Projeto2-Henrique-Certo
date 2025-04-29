@@ -45,3 +45,23 @@ def calcula_pontos_sequencia_alta(lista_inteiros):
         return 30
     else:
         return 0
+    
+def calcula_pontos_full_house(lista_inteiros):
+    numeros = []
+    for numero in lista_inteiros:
+        if numero in numeros:
+            continue
+        else:
+            numeros.append(numero)
+    if len(numeros) != 2:
+        return 0
+    else:
+        soma = 0
+        for i in lista_inteiros:
+            soma += i
+    return soma
+            
+
+    
+    
+    

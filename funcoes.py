@@ -61,7 +61,22 @@ def calcula_pontos_full_house(lista_inteiros):
             soma += i
     return soma
             
-
-    
+def calcula_pontos_quadra(lista_inteiros):
+    quadra = []
+    for numero in lista_inteiros:
+        contagem = 0
+        
+        for i in range(len(lista_inteiros)):
+            if lista_inteiros[i] == numero:
+                contagem += 1
+        if contagem >= 4:
+            quadra.append(numero)
+    if len(quadra) == 0:
+        return 0
+    else:
+        soma = 0
+        for i in lista_inteiros:
+            soma += i
+    return soma
     
     

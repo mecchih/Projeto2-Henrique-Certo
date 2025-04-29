@@ -48,6 +48,7 @@ def calcula_pontos_sequencia_alta(lista_inteiros):
     
 def calcula_pontos_full_house(lista_inteiros):
     numeros = []
+    soma = 0
     for numero in lista_inteiros:
         if numero in numeros:
             continue
@@ -56,9 +57,18 @@ def calcula_pontos_full_house(lista_inteiros):
     if len(numeros) != 2:
         return 0
     else:
-        soma = 0
+        contagem1 = 0
+        contagem2 = 0
         for i in lista_inteiros:
-            soma += i
+            if i == numeros[0]:
+                contagem1 += 1
+            elif i == numeros[1]:
+                contagem2 += 1
+        
+        if contagem1 == 3 and contagem2 == 2 or contagem1 == 2 and contagem2 == 3:
+    
+            for i in lista_inteiros:
+                soma += i
     return soma
             
 def calcula_pontos_quadra(lista_inteiros):
@@ -94,6 +104,5 @@ def calcula_pontos_quina(lista_inteiros):
     else:
         return 0         
     
-            
 
     

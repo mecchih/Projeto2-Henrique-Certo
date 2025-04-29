@@ -65,7 +65,6 @@ def calcula_pontos_quadra(lista_inteiros):
     quadra = []
     for numero in lista_inteiros:
         contagem = 0
-        
         for i in range(len(lista_inteiros)):
             if lista_inteiros[i] == numero:
                 contagem += 1
@@ -79,4 +78,22 @@ def calcula_pontos_quadra(lista_inteiros):
             soma += i
     return soma
     
+def calcula_pontos_quina(lista_inteiros):
+    tem = False
+    for numero in lista_inteiros:
+        if tem == True:
+            break
+        contagem = 0
+        for i in range(len(lista_inteiros)):
+            if lista_inteiros[i] == numero:
+                contagem +=1
+            if contagem >= 5:
+                tem = True
+    if tem == True:
+        return 50
+    else:
+        return 0         
+    
+            
+
     

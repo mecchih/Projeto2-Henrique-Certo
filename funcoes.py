@@ -114,4 +114,13 @@ def calcula_pontos_regra_avancada(lista_inteiros):
     dicionario['sequencia_baixa'] = calcula_pontos_sequencia_baixa(lista_inteiros)
     return dicionario
 
-    
+def faz_jogada(lista,categoria,dicionario):
+    if categoria == '1' or categoria == '2' or categoria == '3' or categoria == '4' or categoria == '5' or categoria == '6':
+        jogada = calcula_pontos_regra_simples(lista)
+        inteiro = int(categoria)
+        dicionario['regra_simples'][inteiro] = jogada[inteiro]
+    else:
+        jogada = calcula_pontos_regra_avancada(lista)
+        dicionario['regra_avancada'][categoria] = jogada[categoria]
+    return dicionario
+
